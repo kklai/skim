@@ -6,10 +6,12 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script src="../js/jquery.touchSwipe.js"></script>
-
-  <link rel ="stylesheet" type = "text/css" href = "style.css"/>
   <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
   <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
   p {
   	font-family: 'Gentium Basic', serif;
   	margin-left: 15px;
@@ -18,10 +20,12 @@
   img {
   	width: 320px;
   }
-
-  div {
-  	width: 320px;
-  	background-color: #fafafa;
+  .chunk {
+    width: 320px;
+    background-color: #fafafa;
+    position: aboslute;
+    top: 0;
+    right: 0;
   }
   </style>
 </head>
@@ -56,7 +60,20 @@
     <p>Barter worries that his family’s legacy on the island might not last long after he and his wife die.</p>
     <p>“I don’t know if they’re going to stick around after I’m gone,” he said. </p>
   </div>
-  <div class="three"></div>
-  <div class="four"></div>
+  <script type="text/javascript">
+    var width = $( window ).width();
+    var height = $( window ).height();
+    $('.chunk').css("width", width + 'px');
+    $('.chunk').css("height", height + 'px');
+    $(".chunk").swipe({
+      //Generic swipe handler for all directions
+      swipe:function(event, direction, distance, duration, fingerCount) {
+        direction: 'right'
+        $(this).toggle( "slide" );
+      },
+      //Default is 75px, set to 0 for demo so any distance triggers swipe
+       threshold:0
+    });
+  </script>
 </body>
 </html>
