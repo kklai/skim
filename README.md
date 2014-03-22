@@ -5,15 +5,15 @@ Skim was created at #SNDMakes March 21-23, 2014.
 
 The project is an exploration of long-form stories on smartphones. As screens get smaller it becomes increasingly difficult for readers to browse a story in order to gauge their interest before making a commitment to engage fully.
 
-[https://twitter.com/kkrebeccalai](KK Rebecca Lai)
+[KK Rebecca Lai](https://twitter.com/kkrebeccalai)
 
-[https://twitter.com/priyakkumar](Priya Krishnakumar)
+[Priya Krishnakumar](https://twitter.com/priyakkumar)
 
-[https://twitter.com/HaoyunSu](Haoyun Su)
+[Haoyun Su](https://twitter.com/HaoyunSu)
 
-[https://twitter.com/komickiller](Tyson Whiting)
+[Tyson Whiting](https://twitter.com/komickiller)
 
-[https://twitter.com/aschweig](Adam Schwiegert)
+[Adam Schwiegert](https://twitter.com/aschweig)
 
 
 <dt>Three solutions are suggested:</dt>
