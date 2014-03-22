@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gentium Basic'), local('GentiumBasic'), url(http://themes.googleusercontent.com/static/fonts/gentiumbasic/v5/KCktj43blvLkhOTolFn-MU3vq9dAc3DuCNWjMJNKvGE.woff) format('woff');
+}
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gentium Basic Bold'), local('GentiumBasic-Bold'), url(http://themes.googleusercontent.com/static/fonts/gentiumbasic/v5/2qL6yulgGf0wwgOp-UqGyJtLj97TRHZgRjiWmuQrnKE.woff) format('woff');
+}
