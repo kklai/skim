@@ -1,79 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Six Miles Out</title>
-        <script type="text/javascript"></script>
-        <link rel ="stylesheet" type = "text/css" href = "style.css"/>
-        <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
-        <style>
-        p {
-        	font-family: 'Gentium Basic', serif;
-        	margin-left: 15px;
-        	margin-right: 15px;
-        }
-        img {
-        	width: 320px;
-        }
+<head>
+  <meta charset="utf-8">
+  <title>Six Miles Out</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="../js/jquery.touchSwipe.js"></script>
 
-        div {
-        	width: 320px;
-        	background-color: #fafafa;
-        }
-        </style>
-    </head>
-    </style>
-    <body>
-    <div class="one">
-    	<img src="original.jpg"></img>
-    </div>
-    <div class="two">
-    	<img src="sixmiles-1.jpg"></img>
-    	<p>In the dregs of winter, 6 miles can seem so much farther.  About 30 people tough out winters on Isle au Haut, a small island off the Maine coast in Penobscot Bay.</p>
+  <link rel ="stylesheet" type = "text/css" href = "style.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <style>
+  p {
+  	font-family: 'Gentium Basic', serif;
+  	margin-left: 15px;
+  	margin-right: 15px;
+  }
+  img {
+  	width: 320px;
+  }
 
-		<p>In the summer, this outpost of Acadia National Park is bustling as hundreds of people from across the country come to enjoy the warm weather, sea breeze, beaches, trails and slow pace of life.</p>
-
-
-		<p>When snow and ice become a threat, most of the island’s homes and camps are abandoned. Quiet sets in, and only the year-rounders remain.</p>
-
-		<p>These dedicated few are fishermen, mechanics, shopkeepers, beekeepers, town officials, retirees and, in many cases, several of these things. The quiet and simplicity of island life keeps them here.</p>
-
-		<p>But the trials and isolation of island winters can wear on anyone, and the struggle to keep year-round island communities alive persists.</p>
-    </div>
-    <div class="three">
-    	<img src="sixmiles-2.jpg"></img>
-    	<p>Billy Barter, 76, was born on this island and he plans to die here.
-		He and his wife, Bernadine, are affectionately referred to as the king and queen of Isle au Haut. They shake their heads at the titles and say, “not really,” but the label persists.</p>
-
-		<p>The Barters have a long line of ancestry on the island. Pelatiah Barter settled on Isle au Haut around 1792 and was among the residents who petitioned the government of Massachusetts to hand ownership of the island over to the settlers in the early 1800s. </p>
-
-		<p>More than two centuries later, Billy Barter is the patriarch of four generations of islanders. Most Barters are fishermen, and even the youngest, 13-year-old Michael, helps out. Billy Barter still fishes 330 lobster traps alongside his son and doesn’t plan to retire. He said the lobstering over the past 15 years has been the best he has seen around the island.</p>
-
-<p>He started his fishing career on an oar-powered skiff before purchasing a motor from a catalog for $39.95 in 1949, he said during a recent interview on the island.  </p>
-
-<p>His wife, Bernie, also a lifelong resident, plays a mean accordion and boisterously organizes weekly volleyball games for residents inside the Town Hall, which doubles as the library and gym.</p>
-
-<p>Growing up on Isle au Haut, Billy Barter had 13 classmates, but all the children he grew up with on the island have “long since moved away,” he said.</p>
-
-<p>“It’s hard to keep these small islands going,” he said.</p>
-
-<p>Bernadine Barter chats with other islanders during Tuesday's Table, a free dinner served on Isle au Haut as a way for residents to enjoy the company of others during the winter months.</p>
-
-<p>People realized more than two centuries ago that Isle au Haut, like many of Maine’s 15 year-round inhabited islands, would be a good place to settle and make their livelihoods, mostly by fishing the waters that surround it.</p>
-
-<p>About 200 years after explorer Samuel de Champlain charted the island in 1604, giving it the name “High Island” because it was the tallest, hilliest island in the bay, the Barters and a few dozen other settlers planted roots.</p>
-
-<p>Billy Barter remembers when every cove and inlet around Isle au Haut was filled with fishing boats throughout the year. Today, there are just a few moored around the town landing.</p>
-
-<p>The population of the island has steadily declined since at least the 1880s, when it was home to an estimated 275 year-round residents. </p> 
-
-<p>In 1890, the year-round population fell to 206. By World War I, it was down to 133. In 1935, it was at 75.</p>
-
-<p>When motor vehicles gained popularity, it became more economical for most fishermen to work from the mainland because shipping fish was cheaper, easier and more efficient. The fishing population began to shift.  </p>
-
-<p>Barter worries that his family’s legacy on the island might not last long after he and his wife die.</p>
-
-<p>“I don’t know if they’re going to stick around after I’m gone,” he said. </p>
-    </div>
-    <div class="three"></div>
-    <div class="four"></div>
+  div {
+  	width: 320px;
+  	background-color: #fafafa;
+  }
+  </style>
+</head>
+<body>
+  <div class="chunk one">
+	 <img src="original.jpg"></img>
+  </div>
+  <div class="chunk two">
+    <img src="sixmiles-1.jpg"></img>
+    <p>In the dregs of winter, 6 miles can seem so much farther.  About 30 people tough out winters on Isle au Haut, a small island off the Maine coast in Penobscot Bay.</p>
+    <p>In the summer, this outpost of Acadia National Park is bustling as hundreds of people from across the country come to enjoy the warm weather, sea breeze, beaches, trails and slow pace of life.</p>
+    <p>When snow and ice become a threat, most of the island’s homes and camps are abandoned. Quiet sets in, and only the year-rounders remain.</p>
+    <p>These dedicated few are fishermen, mechanics, shopkeepers, beekeepers, town officials, retirees and, in many cases, several of these things. The quiet and simplicity of island life keeps them here.</p>
+    <p>But the trials and isolation of island winters can wear on anyone, and the struggle to keep year-round island communities alive persists.</p>
+  </div>
+  <div class="chunk three">
+    <img src="sixmiles-2.jpg"></img>
+    <p>Billy Barter, 76, was born on this island and he plans to die here.He and his wife, Bernadine, are affectionately referred to as the king and queen of Isle au Haut. They shake their heads at the titles and say, “not really,” but the label persists.</p>
+    <p>The Barters have a long line of ancestry on the island. Pelatiah Barter settled on Isle au Haut around 1792 and was among the residents who petitioned the government of Massachusetts to hand ownership of the island over to the settlers in the early 1800s. </p>
+    <p>More than two centuries later, Billy Barter is the patriarch of four generations of islanders. Most Barters are fishermen, and even the youngest, 13-year-old Michael, helps out. Billy Barter still fishes 330 lobster traps alongside his son and doesn’t plan to retire. He said the lobstering over the past 15 years has been the best he has seen around the island.</p>
+    <p>He started his fishing career on an oar-powered skiff before purchasing a motor from a catalog for $39.95 in 1949, he said during a recent interview on the island.  </p>
+    <p>His wife, Bernie, also a lifelong resident, plays a mean accordion and boisterously organizes weekly volleyball games for residents inside the Town Hall, which doubles as the library and gym.</p>
+    <p>Growing up on Isle au Haut, Billy Barter had 13 classmates, but all the children he grew up with on the island have “long since moved away,” he said.</p>
+    <p>“It’s hard to keep these small islands going,” he said.</p>
+    <p>Bernadine Barter chats with other islanders during Tuesday's Table, a free dinner served on Isle au Haut as a way for residents to enjoy the company of others during the winter months.</p>
+    <p>People realized more than two centuries ago that Isle au Haut, like many of Maine’s 15 year-round inhabited islands, would be a good place to settle and make their livelihoods, mostly by fishing the waters that surround it.</p>
+    <p>About 200 years after explorer Samuel de Champlain charted the island in 1604, giving it the name “High Island” because it was the tallest, hilliest island in the bay, the Barters and a few dozen other settlers planted roots.</p>
+    <p>Billy Barter remembers when every cove and inlet around Isle au Haut was filled with fishing boats throughout the year. Today, there are just a few moored around the town landing.</p>
+    <p>The population of the island has steadily declined since at least the 1880s, when it was home to an estimated 275 year-round residents. </p> 
+    <p>In 1890, the year-round population fell to 206. By World War I, it was down to 133. In 1935, it was at 75.</p>
+    <p>When motor vehicles gained popularity, it became more economical for most fishermen to work from the mainland because shipping fish was cheaper, easier and more efficient. The fishing population began to shift.</p>
+    <p>Barter worries that his family’s legacy on the island might not last long after he and his wife die.</p>
+    <p>“I don’t know if they’re going to stick around after I’m gone,” he said. </p>
+  </div>
+  <div class="three"></div>
+  <div class="four"></div>
+</body>
+</html>
