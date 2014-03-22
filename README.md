@@ -17,8 +17,8 @@ The project is an exploration of long-form stories on smartphones. As screens ge
 
 [Damon Kiesow](https://twitter.com/dkiesow)
 
-
 **Three solutions are suggested:**
-  Section Cards
-  Summary Card
-  Anchor Tags
+
+* Section Cards
+* Summary Card
+* Anchor Tags

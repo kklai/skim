@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>Skim it!</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="js/jquery.touchSwipe.js"></script>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.chunk {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.two, .three, .four {
+			/*display: none;*/
+		}
+		.one {
+			background-color: red;
+			z-index: 100;
+		}
+		.two {
+			background-color: blue;
+			z-index: 90;
+		}
+		.three {
+			background-color: green;
+			z-index: 80;
+		}
+		.four {
+			background-color: yellow;
+			z-index: 70;
+		}
+	</style>
+</head>
+<body>
+	<div class="chunk one"></div>
+	<div class="chunk two"></div>
+	<div class="chunk three"></div>
+	<div class="chunk four"></div>
+	<script type="text/javascript">
+		var width = $( window ).width();
+		var height = $( window ).height();
+		$('.chunk').css("width", width + 'px');
+		$('.chunk').css("height", height + 'px');
+		var chunks = ["one", "two", "three", "four"];
+		$(".chunk").swipe({
+      swipe:function(event, direction, distance, duration, fingerCount) {
+      	theclass = $(this).attr('class').split(" ")[1];
+      	if (direction == "left") {
+      		if (theclass != chunks[chunks.length - 1]) {
+      			console.log('xx')
+      			$(this).toggle( "slide" );
+      		} else {
+      			console.log('last')
+      			$('.' + chunks[0]).toggle('slide', function(){
+      				$('.chunk').show();
+      			});
+      		}
+      	}
+      	if (direction == "right") {
+      		for ( i = 0; i < chunks.length; i++ ) {
+      			if (theclass == chunks[i]) {
+      				moveto = i - 1;
+      				$('.' + chunks[moveto]).toggle('slide');
+      			}
+      		}
+      	}
+      },
+      //Default is 75px, set to 0 for demo so any distance triggers swipe
+       threshold:0
+    });
+		allchunks = $('.chunk')
+
+	</script>
+</body>
+</html>
