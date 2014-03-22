@@ -15,6 +15,8 @@ The project is an exploration of long-form stories on smartphones. As screens ge
 
 [Adam Schwiegert](https://twitter.com/aschweig)
 
+[Damon Kiesow](https://twitter.com/dkiesow)
+
 
 <dt>Three solutions are suggested:</dt>
 
