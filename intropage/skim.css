@@ -1,0 +1,16 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+h2 {
+	text-align: left;
+	font-size: 20px;
+}
+
+ul {
+	list-style: square;
+}
