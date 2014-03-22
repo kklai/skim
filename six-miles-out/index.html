@@ -8,6 +8,11 @@
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script src="../js/jquery.touchSwipe.js"></script>
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
   <style>
   body {
     margin: 0;
@@ -18,21 +23,37 @@
   	margin-left: 15px;
   	margin-right: 15px;
   }
-  img {
+  .chunk > img {
   	width: 320px;
   }
   .chunk {
     background-color: #fafafa;
+    position: absolute;
     top: 0;
     left: 0;
   }
   </style>
 </head>
 <body>
-  <div class="chunk one">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="http://agreetodisagree.bangordailynews.com/wp-content/themes/bdnblog2013/images/BDN_Square.jpg" height="100%"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  <div class="chunk one" style="z-index: 150;">
 	 <img src="original.jpg"></img>
   </div>
-  <div class="chunk two">
+  <div class="chunk two" style="z-index: 140;">
     <img src="sixmiles-pullquote.jpg"></img>
     <p>In the dregs of winter, 6 miles can seem so much farther.  About 30 people tough out winters on Isle au Haut, a small island off the Maine coast in Penobscot Bay.</p>
     <p>In the summer, this outpost of Acadia National Park is bustling as hundreds of people from across the country come to enjoy the warm weather, sea breeze, beaches, trails and slow pace of life.</p>
@@ -40,7 +61,7 @@
     <p>These dedicated few are fishermen, mechanics, shopkeepers, beekeepers, town officials, retirees and, in many cases, several of these things. The quiet and simplicity of island life keeps them here.</p>
     <p>But the trials and isolation of island winters can wear on anyone, and the struggle to keep year-round island communities alive persists.</p>
   </div>
-  <div class="chunk three">
+  <div class="chunk three" style="z-index: 130;">
     <img src="sixmiles-royal.jpg"></img>
     <p>In the dregs of winter, 6 miles can seem so much farther.  About 30 people tough out winters on Isle au Haut, a small island off the Maine coast in Penobscot Bay.</p>
     <p>In the summer, this outpost of Acadia National Park is bustling as hundreds of people from across the country come to enjoy the warm weather, sea breeze, beaches, trails and slow pace of life.</p>
@@ -48,7 +69,7 @@
     <p>These dedicated few are fishermen, mechanics, shopkeepers, beekeepers, town officials, retirees and, in many cases, several of these things. The quiet and simplicity of island life keeps them here.</p>
     <p>But the trials and isolation of island winters can wear on anyone, and the struggle to keep year-round island communities alive persists.</p>
   </div>
-  <div class="chunk four">
+  <div class="chunk four" style="z-index: 120;">
     <img src="sixmiles-1.jpg"></img>
     <p>In the dregs of winter, 6 miles can seem so much farther.  About 30 people tough out winters on Isle au Haut, a small island off the Maine coast in Penobscot Bay.</p>
     <p>In the summer, this outpost of Acadia National Park is bustling as hundreds of people from across the country come to enjoy the warm weather, sea breeze, beaches, trails and slow pace of life.</p>
@@ -56,7 +77,7 @@
     <p>These dedicated few are fishermen, mechanics, shopkeepers, beekeepers, town officials, retirees and, in many cases, several of these things. The quiet and simplicity of island life keeps them here.</p>
     <p>But the trials and isolation of island winters can wear on anyone, and the struggle to keep year-round island communities alive persists.</p>
   </div>
-  <div class="chunk five">
+  <div class="chunk five" style="z-index: 110;">
     <img src="sixmiles-2.jpg"></img>
     <p>Billy Barter, 76, was born on this island and he plans to die here.He and his wife, Bernadine, are affectionately referred to as the king and queen of Isle au Haut. They shake their heads at the titles and say, “not really,” but the label persists.</p>
     <p>The Barters have a long line of ancestry on the island. Pelatiah Barter settled on Isle au Haut around 1792 and was among the residents who petitioned the government of Massachusetts to hand ownership of the island over to the settlers in the early 1800s. </p>
@@ -75,7 +96,7 @@
     <p>Barter worries that his family’s legacy on the island might not last long after he and his wife die.</p>
     <p>“I don’t know if they’re going to stick around after I’m gone,” he said. </p>
   </div>
-   <div class="chunk six">
+   <div class="chunk six" style="z-index: 100;">
     <img src="sixmiles-3.jpg"></img>
     <p>Dianne Bowen is leaving Isle au Haut after spending the past 25 years here and raising a son on the island.</p>
 
@@ -106,7 +127,7 @@
 
     <p>As far as her fellow islanders: “I’m going to miss them — well, most.”</p>
   </div>
-   <div class="chunk seven">
+   <div class="chunk seven" style="z-index: 90;">
     <img src="sixmiles-4.jpg"></img>
     <p>Island life can be trying on relationships. Here you are, on a small patch of land surrounded by water and by the same small group of people for the coldest, gloomiest months of the year.</p>
 
@@ -127,7 +148,7 @@
     <p>While the quiet, closeness and isolation can wear patience thin in the dark months of Maine winters, those same qualities also are what many people love about this island.</p>
   </div>
 
-    <div class="chunk eight">
+    <div class="chunk eight" style="z-index: 80;">
     <img src="sixmiles-5.jpg"></img>
     <p>The only way off for most residents is the 40-minute ride to Stonington on the mail boat, which only leaves twice per day, except for Sunday when there is no mail. The only other way to get to and from the mainland is to have your own boat or a willing friend with one.</p>
 
@@ -143,7 +164,7 @@
     <p>Aldrich says the boat has been put to unusual uses. One resident tried to transport a horse on The Mink, but the horse wouldn’t set hoof on the boat. The Mink also has taken a body off the island after the family of a resident decided they wanted to get their loved one to the mainland as soon as possible, according to Aldrich.</p>
   </div>
 
-      <div class="chunk nine">
+  <div class="chunk nine" style="z-index: 70;">
     <img src="sixmiles-6.jpg"></img>
     <p>To make a living on an island, you need to be flexible. Many residents make the bulk of their livelihood on the water, plucking fish, lobster and other sea life from the bay.</p>
 
@@ -160,7 +181,7 @@
     <p>In the winter, residents know the names of every other resident. And their pets. And the sounds their vehicles make. And their business. They like it this way.</p>
   </div>
 
-    <div class="chunk ten">
+  <div class="chunk ten" style="z-index: 60;">
     <img src="sixmiles-pullquote-2.jpg"></img>
      <p>The dwindling population, especially of children, on the island is a concern for those who want to see Isle au Haut — or any island community — survive.</p>
 
@@ -177,17 +198,38 @@
     <p>That closeness and the quiet isolation it exists in make island communities such as this unique and their futures important, he said.</p>
 
     <p>“The grass isn’t greener on the mainland,” Shaffer said.</p>
+  </div>
 
   <script type="text/javascript">
     var width = $( window ).width();
-    var height = $( window ).height();
-    // $('.chunk').css("width", width + 'px');
-    // $('.chunk').css("height", height + 'px');
+    var height = $( document ).height();
+    $('.chunk').css("width", width + 'px');
+    $('.chunk').css("height", height + 'px');
+    var chunks = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
     $(".chunk").swipe({
-      //Generic swipe handler for all directions
       swipe:function(event, direction, distance, duration, fingerCount) {
-        direction: 'right'
-        $(this).toggle( "slide" );
+        theclass = $(this).attr('class').split(" ")[1];
+        if (direction == "left") {
+          console.log('left');
+          if (theclass != chunks[chunks.length - 1]) {
+            console.log('xx')
+            $(this).toggle( "slide" );
+          } else {
+            console.log('last')
+            $('.' + chunks[0]).toggle('slide', function(){
+              $('.chunk').show();
+            });
+          }
+        }
+        if (direction == "right") {
+          console.log('right');
+          for ( i = 0; i < chunks.length; i++ ) {
+            if (theclass == chunks[i]) {
+              moveto = i - 1;
+              $('.' + chunks[moveto]).toggle('slide');
+            }
+          }
+        }
       },
       //Default is 75px, set to 0 for demo so any distance triggers swipe
        threshold:0
