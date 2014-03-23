@@ -76,6 +76,12 @@
     z-index: 5000;
     position: absolute;
   }
+  #skim {
+    color: #fff;
+    margin-top: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: green;
+  }
   </style>
 </head>
 <body>
@@ -92,9 +98,9 @@
           <a class="navbar-brand" href="#"><img class ="favicon" src="http://agreetodisagree.bangordailynews.com/wp-content/themes/bdnblog2013/images/BDN_Square.jpg" height="100%"></a>
           <p class ="nav-header">Six Miles Out</p>
         </div>
-        <!-- <ul class="nav pull-right">
-          <li id="skim">SKIM</li>
-        </ul> -->
+        <ul class="nav pull-right">
+          <li id="skim">Part 1 of 6</li>
+        </ul>
       </div>
     </div>
   <!-- <div class="test"></div> -->
@@ -265,10 +271,12 @@
       if (theclass != chunks[chunks.length - 1]) {
         console.log('xx')
         $(this).toggle( "slide" );
+        $('#skim').html("Part X of 5");
       } else {
         console.log('last')
         $('.' + chunks[0]).toggle('slide', function(){
           $('.chunk').show();
+          $('#skim').html("Part 1 of 5");
         });
       }
     })
