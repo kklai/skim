@@ -7,10 +7,16 @@ body {
 }
 
 h2 {
-	text-align: left;
 	font-size: 20px;
 }
 
 ul {
+	display: inline-block;
+	text-align: left;
 	list-style: square;
+}
+
+.team {
+	text-align: left;
+	display: inline-block;
 }
