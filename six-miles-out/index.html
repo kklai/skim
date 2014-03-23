@@ -85,7 +85,7 @@
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img class ="favicon" src="http://agreetodisagree.bangordailynews.com/wp-content/themes/bdnblog2013/images/BDN_Square.jpg" width="50">Six Miles Out</a>
+          <a id="goback" class="navbar-brand" href="#"><img class ="favicon" src="http://agreetodisagree.bangordailynews.com/wp-content/themes/bdnblog2013/images/BDN_Square.jpg" width="50">Six Miles Out</a>
           <!-- <p class ="nav-header">Six Miles Out</p> -->
           <ul class="nav pull-right">
             <li id="skim">Parts: 9</li>
@@ -286,6 +286,13 @@
           $('#skim').html("Parts: 9");
         });
       }
+    })
+
+    $('#goback').on("click", function(){
+      $('.' + chunks[0]).toggle('slide', function(){
+        $('.chunk').show();
+        $('#skim').html("Parts: 9");
+      });
     })
   </script>
 </body>
