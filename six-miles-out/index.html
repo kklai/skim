@@ -48,9 +48,11 @@
 
   #skim {
     color: #fff;
-    margin-top: 15px;
-    padding: 5px 10px 5px 10px;
+    margin: 0 10px 0 0;
+    padding: 0 10px 5px 10px;
     background-color: green;
+    position: absolute;
+    right: 0px;
   }
 
   img.favicon {
@@ -97,10 +99,10 @@
           </button> -->
           <a class="navbar-brand" href="#"><img class ="favicon" src="http://agreetodisagree.bangordailynews.com/wp-content/themes/bdnblog2013/images/BDN_Square.jpg" height="100%"></a>
           <p class ="nav-header">Six Miles Out</p>
+          <ul class="nav pull-right">
+            <li id="skim">Part 1 of 6</li>
+          </ul>
         </div>
-        <ul class="nav pull-right">
-          <li id="skim">Part 1 of 6</li>
-        </ul>
       </div>
     </div>
   <!-- <div class="test"></div> -->
@@ -264,6 +266,11 @@
       console.log('SWIPEright!!')
       $(this).hide();
       theclass = $(this).attr('class').split(" ")[1];
+      for (var i = 0; i < chunks.length; i++){
+        if (theclass === chunks[i]) {
+          $('.' + chunks[i - 1]).toggle('slide');
+        }
+      }
     })
     $('.chunk').on("swipeleft", function(){
       console.log('SWIPELEFT!!')
