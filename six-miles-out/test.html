@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Skim it!</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+	<script src="script.js"></script>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		#nav {
+			background-color: #ececec;
+			height: 50px;
+		}
+		#circle {
+			padding: 20px;
+		}
+		#skim {
+			display: none;
+			position: absolute;
+			top: 50px;
+			left: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<i class="fa fa-circle" id="circle"></i>
+	</div>
+	<div id="container">
+		<img src="http://external.bangordailynews.com/projects/2014/03/isleauhaut/isleauhaut/still%20images/isleauhaut%20034.jpg" id="beard">
+	<img src="mockup-snd.jpg" id="skim">
+	</div>
+	<script type="text/javascript">
+		var width= $( window ).width();
+		$('#nav').css("width", width + 'px');
+		$('#beard').css("width", width + 'px');
+		$('#skim').css("width", width + 'px');
+
+		$('#circle').click(function(){ 
+			if ($('#skim:visible').length == 0) {
+				$("#skim").fadeIn();
+			} else {
+				$("#skim").fadeOut();
+			}
+		})
+	</script>
+</body>
+</html>
