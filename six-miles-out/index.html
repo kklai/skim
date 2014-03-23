@@ -100,7 +100,7 @@
           <a class="navbar-brand" href="#"><img class ="favicon" src="http://agreetodisagree.bangordailynews.com/wp-content/themes/bdnblog2013/images/BDN_Square.jpg" height="100%"></a>
           <p class ="nav-header">Six Miles Out</p>
           <ul class="nav pull-right">
-            <li id="skim">Part 1 of 6</li>
+            <li id="skim">Parts: 9</li>
           </ul>
         </div>
       </div>
@@ -263,12 +263,17 @@
     $('.chunk').css("height", height + 'px');
     var chunks = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
     $('.chunk').on("swiperight", function(){
-      console.log('SWIPEright!!')
-      $(this).hide();
+      console.log('SWIPEright!!');
       theclass = $(this).attr('class').split(" ")[1];
-      for (var i = 0; i < chunks.length; i++){
-        if (theclass === chunks[i]) {
-          $('.' + chunks[i - 1]).toggle('slide');
+      for (var i = 0; i < chunks.length; i++) {
+        if (theclass == chunks[i]) {
+          if ( i >= 2 ){
+            $('.' + chunks[i - 1]).toggle('slide');
+            $('#skim').html("Part " + (i - 1) + " of " + (chunks.length - 1));
+          } else {
+            $('.' + chunks[0]).toggle('slide');
+            $('#skim').html("Parts: " + (chunks.length - 1));
+          }
         }
       }
     })
@@ -276,14 +281,18 @@
       console.log('SWIPELEFT!!')
       theclass = $(this).attr('class').split(" ")[1];
       if (theclass != chunks[chunks.length - 1]) {
-        console.log('xx')
+        console.log('xx', theclass)
         $(this).toggle( "slide" );
-        $('#skim').html("Part X of 5");
+        for (var i = 0; i < chunks.length; i++){
+          if (theclass === chunks[i]) {
+            $('#skim').html("Part " + (i + 1) + " of " + (chunks.length - 1));
+          }
+        }
       } else {
         console.log('last')
         $('.' + chunks[0]).toggle('slide', function(){
           $('.chunk').show();
-          $('#skim').html("Part 1 of 5");
+          $('#skim').html("Parts: 9");
         });
       }
     })
