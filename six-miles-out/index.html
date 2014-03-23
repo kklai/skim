@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <title>Six Miles Out</title>
     <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  <script src="../js/jquery.touchSwipe.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <!-- <script src="../js/jquery.touchSwipe.js"></script> -->
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -40,6 +41,13 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  #skim {
+    color: #fff;
+    margin-top: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: green;
+  }
+
   img.favicon {
     width: 40px;
     height: 40px;
@@ -55,26 +63,35 @@
     margin-top: 10px;
     margin-left: 10px;
   }
+  .test {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    z-index: 5000;
+    position: absolute;
+  }
   </style>
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<!--           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
+          </button> -->
           <a class="navbar-brand" href="#"><img class ="favicon" src="http://agreetodisagree.bangordailynews.com/wp-content/themes/bdnblog2013/images/BDN_Square.jpg" height="100%"></a>
           <p class ="nav-header">Six Miles Out</p>
         </div>
-        <div class="collapse navbar-collapse">
-        </div><!--/.nav-collapse -->
+        <!-- <ul class="nav pull-right">
+          <li id="skim">SKIM</li>
+        </ul> -->
       </div>
     </div>
+  <!-- <div class="test"></div> -->
   <div class="chunk one" style="z-index: 150;">
 	 <img src="original.jpg"></img>
   </div>
@@ -231,34 +248,24 @@
     $('.chunk').css("width", width + 'px');
     $('.chunk').css("height", height + 'px');
     var chunks = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-    $(".chunk").swipe({
-      swipe:function(event, direction, distance, duration, fingerCount) {
-        theclass = $(this).attr('class').split(" ")[1];
-        if (direction == "left") {
-          console.log('left');
-          if (theclass != chunks[chunks.length - 1]) {
-            console.log('xx')
-            $(this).toggle( "slide" );
-          } else {
-            console.log('last')
-            $('.' + chunks[0]).toggle('slide', function(){
-              $('.chunk').show();
-            });
-          }
-        }
-        if (direction == "right") {
-          console.log('right');
-          for ( i = 0; i < chunks.length; i++ ) {
-            if (theclass == chunks[i]) {
-              moveto = i - 1;
-              $('.' + chunks[moveto]).toggle('slide');
-            }
-          }
-        }
-      },
-      //Default is 75px, set to 0 for demo so any distance triggers swipe
-       threshold: 100
-    });
+    $('.chunk').on("swiperight", function(){
+      console.log('SWIPEright!!')
+      $(this).hide();
+      theclass = $(this).attr('class').split(" ")[1];
+    })
+    $('.chunk').on("swipeleft", function(){
+      console.log('SWIPELEFT!!')
+      theclass = $(this).attr('class').split(" ")[1];
+      if (theclass != chunks[chunks.length - 1]) {
+        console.log('xx')
+        $(this).toggle( "slide" );
+      } else {
+        console.log('last')
+        $('.' + chunks[0]).toggle('slide', function(){
+          $('.chunk').show();
+        });
+      }
+    })
   </script>
 </body>
 </html>
