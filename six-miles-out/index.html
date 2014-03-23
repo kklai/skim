@@ -270,7 +270,7 @@
           if ( i >= 2 ){
             $('.' + chunks[i - 1]).toggle('slide');
             $('#skim').html("Part " + (i - 1) + " of " + (chunks.length - 1));
-          } else {
+          } else if (i != 0) {
             $('.' + chunks[0]).toggle('slide');
             $('#skim').html("Parts: " + (chunks.length - 1));
           }
